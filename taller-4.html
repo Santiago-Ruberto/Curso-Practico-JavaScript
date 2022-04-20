@@ -13,44 +13,43 @@
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="/Reto Final/css/main.css">
+    <link rel="stylesheet" href="/Curso-Practico-JavaScript/main.css">
 </head>
 
 <body>
     <header class="nav-bar">
         <nav>
             <div>
-                <a href="index.html"><img class="js-challenge" src="/Reto Final/img/js-challenge-logo.png" alt=""></a>
-                <img class="platzi" src="/Reto Final/img/platzi.webp" alt="">
+                <a href="/Curso-Practico-JavaScript/Curso-Practico-JavaScript/index.html"><img class="js-challenge" src="/Curso-Practico-JavaScript/js-challenge-logo.png" alt=""></a>
+                <img class="platzi" src="/platzi.webp" alt="">
             </div>
             <a class="user" href="https://twitter.com/SantiagRuberto" target="_blank">@SantigRuberto</a>
         </nav>
     </header>
     <main>
-        <a class="home-btn" href="./index.html">HOME</a>
+        <a class="home-btn" href="/Curso-Practico-JavaScript/index.html">HOME</a>
 
         <!-- Main Section  -->
         <section class="main-section main-section--inside">
             <header>
                 <h3>TRABAJO PRÁCTICO - PLATZI</h3>
-                <h1>Media, Moda y Mediana en números enteros</h1>
+                <h1>Análisis Salarial</h1>
             </header>
             <div class="taller">
                 <section class="taller-card">
-                    <img src="/Reto Final/img/discount.png" alt="">
+                    <img src="/Curso-Practico-JavaScript/dollar.png" alt="">
                     <header>
                         <h2>Cálculos:</h2>
                         <div class="select">
                             <select class="" id="formulaSelect" name="select" onchange="switchFormula();">
-                                <option value="1" selected>Media Aritmetica</option>
-                                <option value="2">Media Armonica</option>
-                                <option value="3">Media Geometrica</option>
-                                <option value="4">Moda</option>
-                                <option value="5">Mediana</option>
+                                <option value="1" selected>Mediana Salarial</option>
+                                <option value="2">Mediana Salarial TOP 10%</option>
                             </select>
                         </div>
                     </header>
                     <form id="form">
+                        <label class="check"><input type="checkbox" id="checkInput" value="" checked> Utilizar lista
+                            precargada para testeo</label>
                         <div class="form-group">
                             <label for="inputPrice">Escribe un <strong> Nuevo Valor</strong> a la lista</label>
                             <input type="number" id="addValue">
@@ -67,14 +66,19 @@
                             <button class="btn-form btn-form--alert" type="button" onclick="removeListNumber();"> Quitar
                                 de la lista</button>
                         </div>
-                        <button class="btn-form" id="btn-render" type="button" onclick="renderMediaAritmetica();">
-                            Calcular Media Aritmetica</button>
+                        <button class="btn-form" id="btn-render" type="button" onclick="renderMedianaSalarial();">
+                            Calcular Mediana Salarial</button>
                         <p class="error" id="errorList"></p>
                     </form>
                 </section>
                 <section class="taller-card">
-                    <h2>Lista de Valores cargados</h2>
+                    <h2>Lista de Valores Cargados</h2>
                     <ul id="list-values">
+                    </ul>
+                </section>
+                <section class="taller-card">
+                    <h2>Lista de Valores precargados para testeo</h2>
+                    <ul id="list-values-default">
                     </ul>
                 </section>
             </div>
@@ -83,8 +87,8 @@
         <!-- Nav Works  -->
         <section class="nav-works nav-works--inside">
             <div class="card">
-                <div class="card__item" onclick="location.href='./taller-1.html'">
-                    <img src="/Reto Final/img/circle.png" alt="">
+                <div class="card__item" onclick="location.href='/Curso-Practico-JavaScript/taller-1.html'">
+                    <img src="/Curso-Practico-JavaScript/circle.png" alt="">
                     <div>
                         <header>
                             <h4>TALLER #1</h4>
@@ -93,8 +97,8 @@
                         <p>Calculo básicos para Cuadrados, Triangulos y Circulos.</p>
                     </div>
                 </div>
-                <div class="card__item" onclick="location.href='./taller-2.html'">
-                    <img src="/Reto Final/img/price.png" alt="">
+                <div class="card__item" onclick="location.href='/Curso-Practico-JavaScript/taller-2.html'">
+                    <img src="/Curso-Practico-JavaScript/price.png" alt="">
                     <div>
                         <header>
                             <h4>TALLER #2</h4>
@@ -103,14 +107,14 @@
                         <p>Calculo básicos para precios, descuentos y cupones de pago.</p>
                     </div>
                 </div>
-                <div class="card__item" onclick="location.href='./taller-4.html'">
-                    <img src="/Reto Final/img/dollar.png" alt="">
+                <div class="card__item" onclick="location.href='/Curso-Practico-JavaScript/taller-3.html'">
+                    <img src="/Curso-Practico-JavaScript/discount.png" alt="">
                     <div>
                         <header>
-                            <h4>TALLER #4</h4>
-                            <h2>Analisis Salarial</h2>
+                            <h4>TALLER #3</h4>
+                            <h2>Media, Moda y Mediana</h2>
                         </header>
-                        <p>Calculo básicos para trabajar con Salarios (medianas y top 10%).</p>
+                        <p>Calculos básicos y avanzados.</p>
                     </div>
                 </div>
             </div>
@@ -127,7 +131,11 @@
         </div>
     </div>
 
-    <script src="/Reto Final/js/taller-3.js"></script>
+    <script src="/Curso-Practico-JavaScript/salarios.js"></script>
+    <script src="/Curso-Practico-JavaScript/taller-4.js"></script>
+    <script>
+        renderListDefault(colombia);
+    </script>
 </body>
 
 </html>
